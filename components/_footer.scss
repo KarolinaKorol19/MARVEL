@@ -1,23 +1,21 @@
 .footer {
-    background-color: #fff;
+    background: image(images/Rectangle 1.png);
     width: 100%;
     max-width: 1440px;
-    height: 513px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 
     &__container {
-        max-width: 1440px;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         align-items: start;
+        justify-items: center;
         text-align: center;
+        gap: 20px;
 
         @media (max-width: 992px) {
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            justify-items: center;
+            gap: 40px;
         }
 
         @media (max-width: 600px) {
@@ -32,14 +30,10 @@
         gap: 10px;
 
         h4 {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        img {
-            width: 176px;
-            height: 176px;
-            object-fit: contain;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #000;
         }
 
         ul {
@@ -48,11 +42,12 @@
             margin: 0;
 
             li {
-                margin: 5px 0;
+                margin: 6px 0;
 
                 a {
                     text-decoration: none;
                     color: #000;
+                    font-size: 14px;
                     transition: color 0.3s;
 
                     &:hover {
@@ -64,8 +59,8 @@
     }
 
     &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
+        img {
+            width: 120px;
+            height: auto;
+        }
+    } }
