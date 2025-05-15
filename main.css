@@ -73,11 +73,7 @@
 .hero__text .btn-primary:hover {
   background-color: #c71c22;
 }
-.hero__image {
-  position: relative;
-}
 .hero__image .hero__bg {
-  position: absolute;
   top: 0;
   right: 0;
   z-index: 0;
@@ -85,7 +81,6 @@
   width: 100%;
 }
 .hero__image .hero__characters {
-  position: relative;
   z-index: 1;
   max-width: 400px;
 }
