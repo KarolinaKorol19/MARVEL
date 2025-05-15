@@ -141,23 +141,21 @@
   background-color: #c71c22;
 }
 
-.hero__image {
-  position: relative;
-}
-
 .hero__image .hero__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
   opacity: 0.2;
   width: 100%;
 }
 
 .hero__image .hero__characters {
-  position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 400px;
+}
+
+.hero__characters {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .about {
@@ -246,68 +244,67 @@
 }
 
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
+  background: url(images/Rectangle1.png);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 .footer__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  justify-items: center;
+  text-align: center;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__column {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer__logo img {
-  height: 40px;
-}
-.footer__burger {
-  display: none;
   flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+  align-items: center;
+  gap: 10px;
 }
-.footer__burger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
+.footer__column h4 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
 }
-.footer__nav ul {
+.footer__column ul {
   list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
-.footer__nav ul li a {
-  color: white;
+.footer__column ul li {
+  margin: 6px 0;
+}
+.footer__column ul li a {
   text-decoration: none;
+  color: #000;
+  font-size: 14px;
   transition: color 0.3s;
 }
-.footer__nav ul li a:hover {
+.footer__column ul li a:hover {
   color: #e62429;
 }
-.footer__nav.hidden {
-  display: none;
-}
-@media (max-width: 768px) {
-  .footer__burger {
-    display: flex;
-  }
-  .footer__nav {
-    width: 100%;
-    margin-top: 20px;
-  }
-  .footer__nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+.footer__logo img {
+  width: 120px;
+  height: auto;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+}/*# sourceMappingURL=main.css.map */

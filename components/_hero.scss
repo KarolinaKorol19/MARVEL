@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    
 }
 
 .hero__text {
@@ -50,22 +51,20 @@
     background-color: #c71c22;
 }
 
-.hero__image {
-    position: relative;
+
+.hero__image .hero__bg  {
+    opacity: 0.2;
+    width: 100%;
     
 }
 
-.hero__image .hero__bg  {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    opacity: 0.2;
-    width: 100%;
-}
-
-.hero__image .hero__characters {
-    position: relative;
-    z-index: 1;
+.hero__image .hero__characters {   
+    z-index: 2;
     max-width: 400px;
+}
+.hero__characters {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
 }
